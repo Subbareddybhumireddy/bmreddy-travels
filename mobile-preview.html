@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMReddy Travels – Mobile Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: "Poppins", system-ui, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(200, 29, 37, 0.35), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(255, 214, 10, 0.18), transparent 40%),
+        linear-gradient(135deg, #0A1440, #172E7A);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px 56px;
+    }
+    header { text-align: center; margin-bottom: 36px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.2rem; }
+    .brand b { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: #C81D25; }
+    .brand span { color: #FFD60A; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -1px; margin-top: 14px; }
+    header p { opacity: 0.8; margin-top: 4px; }
+
+    .phones { display: flex; flex-wrap: wrap; justify-content: center; gap: 44px; }
+    .phone-wrap { text-align: center; }
+    .phone {
+      position: relative;
+      width: 390px;
+      height: 800px;
+      padding: 14px;
+      border-radius: 58px;
+      background: #0b0b0f;
+      box-shadow:
+        0 0 0 2px #2a2a33,
+        0 0 0 6px #111117,
+        0 40px 80px rgba(0, 0, 0, 0.55);
+    }
+    .phone::before {               /* camera notch */
+      content: "";
+      position: absolute;
+      top: 24px; left: 50%;
+      width: 110px; height: 32px;
+      margin-left: -55px;
+      border-radius: 20px;
+      background: #0b0b0f;
+      z-index: 3;
+    }
+    .screen {
+      width: 100%; height: 100%;
+      border-radius: 44px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .screen { display: flex; flex-direction: column; }
+    .status {                       /* phone status bar, so the notch doesn't cover the site */
+      flex: 0 0 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 30px 0;
+      background: #0A1440;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .status i { display: inline-flex; gap: 4px; align-items: center; font-style: normal; }
+    .status i::before { content: ""; width: 16px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, #fff 70%, rgba(255,255,255,.3) 70%); }
+    .screen iframe { width: 362px; flex: 1; border: 0; display: block; }
+    .label { margin-top: 18px; font-weight: 600; opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><b>B</b>BMReddy&nbsp;<span>Travels</span></div>
+    <h1>Self Drive Cars in Nellore</h1>
+    <p>Book online in a minute, right from your phone.</p>
+  </header>
+
+  <div class="phones">
+    <div class="phone-wrap">
+      <div class="phone"><div class="screen"><div class="status"><span>9:41</span><i>5G</i></div><iframe src="index.html" title="Home screen"></iframe></div></div>
+      <p class="label">Home</p>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone"><div class="screen"><div class="status"><span>9:41</span><i>5G</i></div><iframe src="index.html#cars" title="Cars"></iframe></div></div>
+      <p class="label">Choose your car</p>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone"><div class="screen"><div class="status"><span>9:41</span><i>5G</i></div><iframe src="index.html#booking" title="Booking"></iframe></div></div>
+      <p class="label">Book in a minute</p>
+    </div>
+  </div>
+</body>
+</html>

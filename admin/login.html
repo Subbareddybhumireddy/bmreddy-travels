@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="theme-color" content="#0B1F5C" />
+  <title>Admin login – BMReddy Travels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="auth">
+
+  <svg width="0" height="0" class="sprite" aria-hidden="true">
+    <defs>
+      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    </defs>
+  </svg>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <span class="logo-mark" aria-hidden="true">B</span>
+        <span class="logo-text">BMReddy <span>Admin</span></span>
+      </div>
+
+      <p id="msg" hidden></p>
+
+      <!-- Sign in -->
+      <form id="login" novalidate>
+        <h1>Owner login</h1>
+        <p class="auth-sub">Only the owner of BMReddy Travels can sign in here. Customers don't need an account. <a href="../index.html#booking">Book a car</a>.</p>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" inputmode="email" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" class="btn btn-red btn-lg btn-block" id="login-btn">Sign in</button>
+        <button type="button" class="link-btn" id="show-forgot">Forgot password?</button>
+      </form>
+
+      <!-- Forgot password -->
+      <form id="forgot" novalidate hidden>
+        <h1>Reset password</h1>
+        <p class="auth-sub">Enter the admin email. We'll send a link to set a new password.</p>
+        <div class="field">
+          <label for="forgot-email">Email</label>
+          <input id="forgot-email" type="email" inputmode="email" autocomplete="username" required />
+        </div>
+        <button type="submit" class="btn btn-red btn-lg btn-block" id="forgot-btn">Send reset link</button>
+        <button type="button" class="link-btn" id="show-login">Back to sign in</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js" integrity="sha384-0w2KAL2YHP6wKOkUDzkCDGgVvfmHnj02DHeQ6XcHOgTfFsGyonKOpShMH1x6nk9o" crossorigin="anonymous"></script>
+  <script src="../config.js"></script>
+  <script src="common.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

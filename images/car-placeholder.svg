@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8eef9"/>
+      <stop offset="1" stop-color="#c9d6ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg)"/>
+  <rect y="190" width="400" height="60" fill="#0b2a5b" opacity="0.12"/>
+  <path d="M70 170 L90 130 Q100 112 125 108 L250 104 Q275 104 295 125 L320 140 Q345 145 345 165 L345 178 L70 178 Z" fill="#0b2a5b"/>
+  <path d="M120 128 L135 114 L200 112 L200 132 Z M210 112 L250 112 Q265 114 280 132 L210 132 Z" fill="#cfe0ff"/>
+  <rect x="320" y="150" width="22" height="8" rx="3" fill="#ffc93c"/>
+  <rect x="72" y="150" width="14" height="8" rx="3" fill="#e2231a"/>
+  <circle cx="125" cy="180" r="24" fill="#222"/><circle cx="125" cy="180" r="10" fill="#bbb"/>
+  <circle cx="290" cy="180" r="24" fill="#222"/><circle cx="290" cy="180" r="10" fill="#bbb"/>
+  <text x="200" y="232" font-family="Poppins, Arial, sans-serif" font-size="14" fill="#0b2a5b" text-anchor="middle" opacity="0.6">Add your car photo in /images</text>
+</svg>
